@@ -1,4 +1,4 @@
-# BITS Digital CodeForge V1.0 — Official Bug Fix Log
+# BITS Digital CodeForge V1.0 - Official Bug Fix Log
 
 | # | Bug / Issue Identified | How User Reproduced It | Root Cause | Fix Implemented | How We Tested the Fix |
 |---|---|---|---|---|---|
