@@ -84,12 +84,3 @@ Located in `test_data/`:
 1. `bits_sample_standard.xlsx`: 113 students across 3 BITS courses (`CS F111`, `MATH F111`, `EEE F111`) with natural Gaussian mark distributions.
 2. `bits_sample_multi_course.xlsx`: 142 students across 4 major courses.
 3. `bits_sample_edge_cases.xlsx`: 15 records testing fractional marks (`80.2`), borderline marks (`79`, `69`), duplicate BITS IDs, uniform scores ($\sigma = 0$), and extremes (`0`, `100`).
-
----
-
-## 🌐 Instant Zero-Cost Deployment (30 Seconds)
-
-### Netlify Drop (Easiest — No Git or Login Required)
-1. Open [app.netlify.com/drop](https://app.netlify.com/drop) in your browser.
-2. Drag and drop the `Project1` folder into the upload window.
-3. Netlify will instantly provide your live, public HTTPS URL.
