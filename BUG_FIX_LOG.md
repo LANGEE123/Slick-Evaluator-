@@ -1,6 +1,6 @@
 # BITS Digital CodeForge V1.0 — Official Bug Fix Log
 
-| # | Bug / Issue Identified | How User Reproduced It | Root Cause | Fix Implemented | How User Tested the Fix |
+| # | Bug / Issue Identified | How User Reproduced It | Root Cause | Fix Implemented | How We Tested the Fix |
 |---|---|---|---|---|---|
 | **1** | Course dropdown duplicates course options when uploading files sequentially | Uploaded an Excel file, then uploaded another file (or re-uploaded the same file) | Existing `<option>` elements in the `<select id="course">` dropdown were not cleared prior to reading and populating courses from the new file | Cleared `course.innerHTML` back to the default placeholder (`<option value="">Select a course to begin</option>`) before reading incoming workbook data | Uploaded `bits_sample_standard.xlsx` followed by `bits_sample_multi_course.xlsx`; verified that the course list was completely reset and populated only with courses from the active file |
 | **2** | Course dropdown repeatedly lists duplicate course options for every student row in the dataset | Uploaded an Excel file with multiple student rows for the same course (e.g. 45 students in "CS F111") | The code executed `data.map(d=>d.Course).forEach(c => course.add(new Option(c,c)))` directly on student records without deduplicating course names | Extracted unique course titles using `[...new Set(data.map(d => d.Course).filter(Boolean))].sort()` before creating dropdown options | Uploaded a sheet containing 45 students in `CS F111`; verified `CS F111` appears exactly once in the select element |
