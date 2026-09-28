@@ -60,7 +60,7 @@ Built for the **BITS Digital CodeForge V1.0** challenge, this console elevates a
 
 ## 🐛 Comprehensive Bug Fix Log (Stage 1)
 
-| # | Bug / Issue Identified | How You Reproduced It | Root Cause | Fix Implemented | How You Tested the Fix |
+| # | Bug / Issue Identified | How User Reproduced It | Root Cause | Fix Implemented | How We Tested the Fix |
 |---|---|---|---|---|---|
 | **1** | Course dropdown duplicates course options when uploading files sequentially | Uploaded an Excel file, then uploaded another file sequentially | `<select id="course">` options were not cleared prior to reading new file | Cleared `course.innerHTML` to default placeholder before populating new courses | Uploaded 2 files sequentially; verified course list resets cleanly |
 | **2** | Course dropdown lists the same course dozens of times for each student row | Uploaded a sheet with 45 students in `CS F111` | Code iterated over every student record without deduplicating course names | Extracted unique course titles using `[...new Set(...)]` before building option elements | Uploaded 45-student sheet; verified each course appears exactly once |
